@@ -88,7 +88,7 @@ function csvJSON(csv) {
 }
 exports.addBook = asyncHandler(async (req, res, next) => {
   try {
-    let data = await Book.insertMany(csvJSON(ss));
+    // let data = await Book.insertMany(csvJSON(ss));
     console.log(data);
   } catch (error) {
     console.log(error);
