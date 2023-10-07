@@ -85,7 +85,14 @@ exports.addBook = asyncHandler(async (req, res, next) => {
 
 exports.getBooks = asyncHandler(async (req, res, next) => {
   try {
-    let books = await Book.find();
+    let searchQuery = req.query.search;
+    let options = searchQuery
+      ? {
+          title: { $regex: searchQuery, $options: "i" },
+        }
+      : {};
+    console.log(options);
+    let books = await Book.find(options).exec();
     let booksLength = books.length;
 
     if (req.query.page) {
