@@ -87,13 +87,16 @@ exports.getBooks = asyncHandler(async (req, res, next) => {
   try {
     let books = await Book.find();
     let booksLength = books.length;
+
     if (req.query.page) {
       let pageSize = req.query.pageSize || 10;
       const pageNumber = req.query.page || 1; // Get the current page number from the query parameters
       const startIndex = (pageNumber - 1) * pageSize;
-      const endIndex = startIndex + pageSize;
+      const endIndex = startIndex + Number(pageSize);
+      console.log(startIndex, endIndex);
       books = books.slice(startIndex, endIndex);
     }
+
     res.status(200).json({ books, total: booksLength });
   } catch (error) {
     console.log(error);
