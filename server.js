@@ -44,6 +44,7 @@ connectDB();
 //#region ~ Routes ~
 
 app.use("/api/v1/auth", require("./routes/auth-routes"));
+app.use("/api/v1/books", require("./routes/book-routes"));
 
 //#endregion
 
