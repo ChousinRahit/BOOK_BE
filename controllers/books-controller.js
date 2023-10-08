@@ -83,6 +83,36 @@ exports.addBook = asyncHandler(async (req, res, next) => {
 });
 //#endregion
 
+exports.createBook = asyncHandler(async (req, res, next) => {
+  try {
+    let book = await Book.create(req.body);
+    res.status(200).json(book);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+exports.updateBook = asyncHandler(async (req, res, next) => {
+  try {
+    console.log(req.query);
+    let book = await Book.findByIdAndUpdate(req.query.id, req.body, {
+      new: true,
+    });
+    res.status(200).json(book);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+exports.deleteBook = asyncHandler(async (req, res, next) => {
+  try {
+    let book = await Book.findByIdAndDelete(req.query.id);
+    res.status(200).json({ message: `${book.title} is deleted` });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 exports.getBooks = asyncHandler(async (req, res, next) => {
   try {
     let searchQuery = req.query.search;
