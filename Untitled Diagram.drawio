@@ -1,9 +1,67 @@
-<mxfile host="app.diagrams.net" modified="2023-10-14T03:01:54.305Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" version="22.0.4" etag="nm8ee0eeQymXWOx4bMGk" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-17T05:56:37.425Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="jDv013DVnGxIMZsr8jgo" version="22.0.4" type="github">
   <diagram name="Page-1" id="nebqNqIOjINV0rYXzbPs">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-1" value="Table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-2" value="Toolbar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="38" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-3" value="DisplayTableSelection" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="81.5" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JxVMCtcatklZFRXQ1UeT-5" target="JxVMCtcatklZFRXQ1UeT-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-5" value="Toolbar&lt;br&gt;&lt;br&gt;Select table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="23" width="80" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-9" value="Process" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" collapsed="1" parent="1">
+          <mxGeometry x="150" y="141.5" width="80" height="30" as="geometry">
+            <mxRectangle x="150" y="141.5" width="170" height="210" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-10" value="10x10 grid is shown to select the table rowCount and colCount" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="JxVMCtcatklZFRXQ1UeT-9">
+          <mxGeometry y="30" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-11" value="On selection of&amp;nbsp; rowCount X colCount fn&amp;nbsp;&lt;b&gt;OnTableAction&lt;/b&gt; is called" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="JxVMCtcatklZFRXQ1UeT-9">
+          <mxGeometry y="90" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-12" value="And the Grid Selection Box is closed&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="JxVMCtcatklZFRXQ1UeT-9">
+          <mxGeometry y="150" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JxVMCtcatklZFRXQ1UeT-15" target="JxVMCtcatklZFRXQ1UeT-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-15" value="Getting the x,y position to place the table when pointer is clicked, calculating Dimensions and creating element using&amp;nbsp;&lt;b&gt;newTableElement &lt;/b&gt;and setting pendingTableElementId&lt;b&gt;&amp;nbsp;to element id and calling&amp;nbsp;&lt;/b&gt;insertTableElement method" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.05714285714285714;" vertex="1" parent="1">
+          <mxGeometry x="425" y="216.5" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="JxVMCtcatklZFRXQ1UeT-3" target="JxVMCtcatklZFRXQ1UeT-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-16" value="&lt;b style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;OnTableAction&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="430" y="111.5" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-17" value="&lt;b&gt;&lt;i style=&quot;&quot;&gt;fn&lt;/i&gt;&amp;nbsp;&lt;span style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;OnTableAction (rowCount, colCount)&lt;/span&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="186.5" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-19" value="" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.05714285714285714;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="216.5" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-21" value="insertTableElement" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="250" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-23" value="insertTableElement ( tableElement)&lt;br&gt;&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="241.5" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JxVMCtcatklZFRXQ1UeT-28" value="https://docs.google.com/document/d/1CKhbVUA6ZZvoeTS5aMxuPlblH2QPrss0A2M_rz48oNs/edit&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="920" y="318" width="550" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
